@@ -10,6 +10,14 @@
   <div>
     <%= form.label :body %><br>
     <%= form.text_area :body %><br>
+
+  <%= form.file_field :profile_picture, class: 'form-control' %><br>
+
+
+
+
+
+
     <% article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
