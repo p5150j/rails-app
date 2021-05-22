@@ -1,3 +1,7 @@
+
+
+<div class="container-lg">
+
 <h1><%= @article.title %></h1>
 
 <p><%= @article.body %></p>
@@ -5,7 +9,7 @@
 
 
 
-<%= image_tag url_for(@article.profile_picture) %>
+<%= image_tag url_for(@article.profile_picture), :class => "img-thumbnail" %>
 
 <p><%= @article.profile_picture %></p>
 
@@ -18,3 +22,6 @@ aws-railsapp-uploads
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
 </ul>
+
+
+</div>
