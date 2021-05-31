@@ -18,20 +18,19 @@ jobs:
         with:
           ruby-version: 2.6.x
 
-#      - name: Build and run test
-#        env:
-#          DATABASE_URL: postgres://postgres:@localhost:5432/test
-#          REDIS_URL: redis://localhost:6379/0
-#          RAILS_ENV: test
-#          POSTGRES_USER: postgres
-#          POSTGRES_PASSWORD: postgres
-#        run: |
-#          sudo apt-get -yqq install libpq-dev
-#          gem install bundler
-#          bundle install --jobs 4 --retry 3
-#          bundle exec rake db:create
-#          bundle exec rake db:migrate
-#          #undle exec rspec .
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+
+      - name: Build and run test
+        env:
+          DATABASE_URL: postgres://postgres:@localhost:5432/test
+          POSTGRES_USER: railsapp
+          POSTGRES_PASSWORD: railsapp
+        run: |
+          sudo apt-get -yqq install libpq-dev
+          gem install bundler
+          bundle install --jobs 4 --retry 3
 
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
