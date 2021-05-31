@@ -261,6 +261,3 @@ DEPENDENCIES
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
-
-BUNDLED WITH
-   1.17.3
