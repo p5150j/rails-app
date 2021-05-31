@@ -42,6 +42,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: rails-app
           environment_name: Railsapp-env
-          version_label: ${GITHUB_RUN_NUMBER}
+          version_label: ${{ github.run_number }}
           region: us-west-2
           deployment_package: deploy.zip
