@@ -18,7 +18,7 @@ jobs:
         with:
           ruby-version: 2.6.x
 
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install
 
